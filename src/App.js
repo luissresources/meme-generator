@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import domtoimage from 'dom-to-image';
 import Logo from './componentes/Logo';
+import {AiOutlineArrowRight, AiOutlineArrowDown} from 'react-icons/ai';
 import imagenLogo from './images/logo-2.png'
 import './App.css';
 
@@ -86,6 +87,8 @@ function App(props) {
           </div>
           <img src={image !== '' ? `/images/${image}.jpg` : 'https://via.placeholder.com/200'} alt="" className='meme-img default'/>
         </div>
+        <AiOutlineArrowRight className='icon-arrow-right' />
+        <AiOutlineArrowDown className='icon-arrow-down' />
         <div className="meme-result">
         </div>
       </div>
