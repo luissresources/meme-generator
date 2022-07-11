@@ -36,19 +36,27 @@ function App(props) {
     if (divImgMemeResult !== null){
       divImgMemeResult.remove();
     }
+
+    if (document.querySelector('img.default')){
+      alert('Please, selected a image');
+    } else {
+      
+    }
+
     let node = document.querySelector('.container-meme');
 
-    domtoimage.toPng(node)
-    .then(function (dataUrl) {
-        let divMemeResult = document.querySelector('.meme-result');
-        var img = new Image();
-        img.src = dataUrl;
-        setUrlMemeResult(dataUrl);
-        divMemeResult.appendChild(img);
-    })
-    .catch(function (error) {
-        console.error('oops, something went wrong!', error);
-    });
+      domtoimage.toPng(node)
+      .then(function (dataUrl) {
+          let divMemeResult = document.querySelector('.meme-result');
+          var img = new Image();
+          img.src = dataUrl;
+          setUrlMemeResult(dataUrl);
+          divMemeResult.style.boxShadow = '0 0 5px 10px var(--orange)';
+          divMemeResult.appendChild(img);
+      })
+      .catch(function (error) {
+          console.error('oops, something went wrong!', error);
+      });
   }
 
   return (
@@ -70,14 +78,16 @@ function App(props) {
         <input type="text" placeholder='Bottom text' onChange={onChangeBottomText} />
         <button onClick={onClickCreateImage}>Create</button>
       </form>
-      <div className="container-meme">
-        <div className="meme__items">
-          <span className='meme-top-text'>{topText}</span>
-          <span className='meme-bottom-text'>{bottomText}</span>
+      <div className="container-meme-result">
+        <div className="container-meme">
+          <div className="meme__items">
+            <span className='meme-top-text'>{topText}</span>
+            <span className='meme-bottom-text'>{bottomText}</span>
+          </div>
+          <img src={image !== '' ? `/images/${image}.jpg` : 'https://via.placeholder.com/200'} alt="" className='meme-img default'/>
         </div>
-        <img src={image !== '' ? `/images/${image}.jpg` : 'https://via.placeholder.com/200'} alt="" className='meme-img default'/>
-      </div>
-      <div className="meme-result">
+        <div className="meme-result">
+        </div>
       </div>
       <a href={urlMemeResult} className={urlMemeResult === '' ? 'meme-download' : ''} download>Download</a>
     </div>

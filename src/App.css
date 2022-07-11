@@ -1,10 +1,17 @@
 .App {
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
+
+/* @media (min-width: 768px){
+    .App {
+      display: grid;
+      gr
+    }
+} */
 
 form {
   display: flex;
@@ -17,6 +24,19 @@ form {
     form {
       width: 60rem;
     }
+}
+
+.container-meme-result {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 768px){
+  .container-meme-result {
+    flex-direction: row;
+  }
 }
 
 .container-meme {
@@ -58,10 +78,11 @@ form {
 }
 
 .meme-result {
-  max-width: 40rem;
+  width: 20rem;
   height: auto;
-  margin: 2rem;
+  margin: 2rem 0;
   box-shadow: 0 0 5px 10px var(--orange);
+  height: 20rem;
 }
 
 .meme-download {
