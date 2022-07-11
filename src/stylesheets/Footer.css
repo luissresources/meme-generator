@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-text {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .footer-text span{
+    color: var(--orange);
+    font-size: 2rem;
+  }

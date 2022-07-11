@@ -1,0 +1,11 @@
+.container-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 25rem;
+    filter: drop-shadow(1px 0px 1px var(--black));
+}

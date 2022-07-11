@@ -1,38 +1,69 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px){
+    form {
+      width: 60rem;
+    }
+}
+
+.container-meme {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:flex-end;
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+}
+
+.meme__items{
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+  height: 100%;
+  width: 100%;
+  text-overflow: clip;
+  word-break: break-all;
+}
+
+.meme-top-text, .meme-bottom-text {
+  font-size: 2.4rem;
+  color: var(--white);
+  text-shadow: 0 0 1px 1px var(--black);
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.meme-img {
+  border-radius: 3px;
+  position: absolute;
+  object-fit: cover;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.meme-result {
+  max-width: 40rem;
+  height: auto;
+  margin: 2rem;
+  box-shadow: 0 0 5px 10px var(--orange);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.meme-download {
+  display: none;
 }

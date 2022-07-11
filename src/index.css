@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100&family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap'); */
+
+:root {
+  --white: #fff;
+  --black: #222;
+  --blueLight: #94C6F2;
+  --blackLight: #121E26;
+  --yellow: #F2C53D;
+  --orangeLight: #F2B138;
+  --orange: #F29D35;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+}
+
+*,::before, ::after {
+  box-sizing: initial;
+}
+
+body {
+  box-sizing: inherit;
+  font-size: 1.6rem;
+  background-color: var(--blackLight);
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--white);
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+form {
+  width: 100%;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  background-color: var(--orangeLight);
+  color: var(--black);
+  border: 1px solid var(--yellow);
+  border-radius: 3px;
+  padding: 0.5rem 4rem;
+  margin: 0.25rem auto;
+  cursor: pointer;
+}
+
+a:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  transition: 0.25s;
+}
+
+button {
+  outline: none;
+  background-color: var(--orangeLight);
+  color: var(--black);
+  border: 1px solid var(--yellow);
+  border-radius: 3px;
+  padding: 0.5rem 4rem;
+  margin: 0.25rem auto;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+button:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  transition: 0.25s;
+}
+
+select {
+  outline: none;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--blueLight);
+  background-color: var(--white);
+  border-radius: 3px;
+  width: 100%;
+  margin: 0.25rem 0;
+  cursor: pointer;
+}
+
+select:hover {
+  box-shadow: 0 0 1px 1px;
+}
+
+input {
+  outline: none;
+  border: 1px solid var(--blueLight);
+  border-radius: 3px;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+.container {
+  max-width: min(90%, 192rem);
+  margin: 0 auto;
 }
